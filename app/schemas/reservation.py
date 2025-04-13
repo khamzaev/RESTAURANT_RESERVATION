@@ -1,6 +1,7 @@
 from pydantic import BaseModel, Field, validator
 from datetime import datetime
 
+
 class ReservationBase(BaseModel):
     customer_name: str = Field(..., min_length=1, max_length=100)
     table_id: int
@@ -13,8 +14,10 @@ class ReservationBase(BaseModel):
             raise ValueError("Время бронирования не может быть в прошлом")
         return value
 
+
 class ReservationCreate(ReservationBase):
     pass
+
 
 class ReservationResponse(ReservationBase):
     id: int

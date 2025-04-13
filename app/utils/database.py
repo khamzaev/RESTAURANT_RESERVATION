@@ -1,11 +1,21 @@
 import os
+import sys
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+from dotenv import load_dotenv
 
+
+load_dotenv()
+
+
+print(sys.executable)
 
 # Получаем URL базы данных из переменных окружения
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://test_user:test_password@localhost:5432/test_db")
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+# Отладочный вывод
+print(f"DATABASE_URL: {DATABASE_URL}")
 
 # Создаем подключение к PostgreSQL
 engine = create_engine(DATABASE_URL)

@@ -87,46 +87,26 @@ pytest tests/
 
 ## Структура проекта
 ```
-restaurant-reservation/
-├── alembic/                 # Директория для миграций Alembic
-│   ├── versions/            # Файлы версий миграций
-│   └── env.py               # Конфигурация Alembic
-├── app/                     # Основное приложение
-│   ├── __init__.py          # Инициализация приложения
-│   ├── main.py              # Точка входа в приложение (FastAPI)
-│   ├── database.py          # Настройка подключения к базе данных
-│   ├── models/              # SQLAlchemy/SQLModel модели
-│   │   ├── __init__.py
-│   │   ├── table.py         # Модель "Table"
-│   │   └── reservation.py   # Модель "Reservation"
-│   ├── routers/             # Роутеры для API
-│   │   ├── __init__.py
-│   │   ├── tables.py        # Роуты для работы со столиками
-│   │   └── reservations.py  # Роуты для работы с бронями
-│   ├── schemas/             # Pydantic-схемы для валидации
-│   │   ├── __init__.py
-│   │   ├── table.py         # Схемы для "Table"
-│   │   └── reservation.py   # Схемы для "Reservation"
-│   ├── services/            # Бизнес-логика приложения
-│   │   ├── __init__.py
-│   │   ├── table_service.py # Логика для работы со столиками
-│   │   └── reservation_service.py # Логика для работы с бронями
-│   └── utils/               # Утилиты (например, для обработки ошибок)
-│       ├── __init__.py
-│       └── validators.py    # Валидации (например, проверка пересечений времени)
-├── tests/                   # Тесты
-│   ├── __init__.py
-│   ├── test_tables.py       # Тесты для столиков
-│   └── test_reservations.py # Тесты для броней
-├── .env                     # Настройки окружения (например, переменные для подключения к БД)
-├── .gitignore               # Исключения для git
-├── Dockerfile               # Dockerfile для контейнеризации приложения
-├── docker-compose.yml       # Конфигурация docker-compose
-├── requirements.txt         # Зависимости Python
-└── README.md                # Инструкция для проекта
+RESTAURANT_RESERVATION/
+├── alembic/
+├── app/
+│   ├── main.py
+│   ├── models/
+│   ├── routers/
+│   ├── schemas/
+│   ├── services/
+│   └── utils/
+├── tests/
+├── venv/
+├── alembic.ini
+├── docker-compose.yml
+├── Dockerfile
+├── pytest.ini
+├── README.md
+└── requirements.txt
 ```
 
 ---
 
 ## Автор
-[Ваше имя или команда]
+[Джамал Хамзаев](https://github.com/khamzaev)

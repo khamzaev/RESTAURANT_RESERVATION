@@ -6,8 +6,10 @@ class TableBase(BaseModel):
     seats: int
     location: str
 
+
 class TableCreate(TableBase):
     pass
+
 
 class TableResponse(TableBase):
     id: int
