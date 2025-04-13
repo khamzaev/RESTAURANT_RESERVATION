@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 
+
 class TableBase(BaseModel):
     name: str
     seats: int

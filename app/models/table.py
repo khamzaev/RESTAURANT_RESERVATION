@@ -1,5 +1,7 @@
 from sqlalchemy import Column, Integer, String
+
 from app.database import Base
+
 
 class Table(Base):
     __tablename__ = "tables"
