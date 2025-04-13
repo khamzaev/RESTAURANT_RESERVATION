@@ -1,12 +1,12 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-from app.database import SessionLocal
 from app.schemas.table import TableCreate, TableResponse
 from app.services.table_service import (
     create_table, get_table,
     list_tables, update_table, delete_table
 )
+from app.utils.database import SessionLocal
 from app.utils.logger import logger
 
 

@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker
 
 
 # Получаем URL базы данных из переменных окружения
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql+psycopg2:///./test.db")
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://test_user:test_password@localhost:5432/test_db")
 
 # Создаем подключение к PostgreSQL
 engine = create_engine(DATABASE_URL)

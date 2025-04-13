@@ -1,8 +1,11 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from app.database import SessionLocal
+
+
+
 from app.schemas.reservation import ReservationCreate, ReservationResponse
 from app.services.reservation_service import create_reservation, list_reservations, delete_reservation
+from app.utils.database import SessionLocal
 from app.utils.logger import logger
 
 router = APIRouter(
